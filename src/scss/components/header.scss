@@ -1,0 +1,22 @@
+header {
+  color: $header-notification-color;
+
+  .notification {
+    background-color: $header-notification-bg-color;
+    font-size: 75%;
+    line-height: 60px;
+    text-align: center;
+
+    a {
+      color: $header-notification-link-color;
+      font-weight: 700;
+      margin-left: 14px;
+
+      &:hover {
+        color: darken($header-notification-link-color, 20%);
+      }
+    }
+  }
+}
+
+

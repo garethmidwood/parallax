@@ -1,0 +1,61 @@
+.hero {
+  position: relative;
+
+  .cover {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .overlay {
+    height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+
+    &.radial {
+      background-image: linear-gradient(218deg, #7f3fd1 0%, #3b8ef9 100%);
+      opacity: 0.05;
+    }
+
+    &.message {
+      align-items: center;
+      color: $hero-color;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      h1 {
+        max-width: 720px;
+        margin-bottom: 18px;
+      }
+
+      p {
+        margin: 0 auto 45px;
+        max-width: 370px;
+      }
+    }
+  }
+
+  .footer {
+    bottom: 0;
+    color: $hero-color;
+    font-size: 87.5%;
+    height: 120px;
+    left: 0;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 0;
+
+    div {
+      margin: 0 auto;
+      border-top: 1px solid #fff;
+      max-width: 50%;
+      padding-top: 33px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  /* I left out the video as the  */
+}
+

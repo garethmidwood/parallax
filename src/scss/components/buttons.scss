@@ -1,0 +1,29 @@
+.cta-button {
+  background-color: $button-cta-bg-color;
+  border-radius: 30px;
+  color: $button-cta-color;
+  display: inline-block;
+  filter: drop-shadow(0px 5px 4px rgba(32,0,187,0.3));
+  font-size: 75%;
+  font-weight: 700;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 37px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($button-cta-bg-color, 20%);
+  }
+
+  .shadow {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    border: 1px solid $button-cta-bg-color;
+    border-radius: 30px;
+  }
+}

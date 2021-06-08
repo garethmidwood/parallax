@@ -1,0 +1,72 @@
+main {
+  color: $main-color;
+  max-width: 1100px;
+  margin: 50px auto 0;
+
+  @include mq($until: desktop) {
+    max-width: 960px;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+
+    @include mq($until: desktop) {
+      display: block;
+      padding: 40px 20px;
+      width: auto;
+    }
+
+    > div {
+      flex-basis: 50%;
+      line-height: 30px;
+      padding: 80px;
+
+      @include mq($until: desktop) {
+        padding: 0;
+      }
+
+      &.title {
+        line-height: 50px;
+        text-align: left;
+        color: $main-title-color;
+        text-shadow: 0 0 1px $main-title-shadow-color;
+
+        span {
+          color: $main-title-sub-color;
+          display: block;
+        }
+      }
+
+      img {
+        width: 120%;
+        margin: -80px 0 0 -20%;
+
+        @include mq($until: desktop) {
+          display: block;
+          margin: 0 auto;
+          width: 50%;
+        }
+      }
+
+      &.image-right {
+        img {
+          margin: -80px -20% 0 0 ;
+
+          @include mq($until: desktop) {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      h2 {
+        color: $main-h2-color;
+        margin-bottom: 40px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

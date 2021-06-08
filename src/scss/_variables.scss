@@ -1,0 +1,37 @@
+/* Breakpoints */
+$mq-responsive: true;
+$mq-breakpoints: (
+  mobile:  320px,
+  tablet:  740px,
+  desktop: 980px,
+  wide:    1300px,
+  desktopAd: 810px,
+  mobileLandscape: 480px
+);
+$mq-static-breakpoint: desktop;
+
+/* Leaving this here for use in development, should not go live */
+//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+/* Header */
+$header-notification-bg-color: #000095;
+$header-notification-color: #9797ff;
+$header-notification-link-color: #f93b84;
+
+/* Navigation */
+$navigation-color: #fff;
+
+/* Hero */
+$hero-color: #fff;
+
+/* Buttons */
+$button-cta-color: #fff;
+$button-cta-bg-color: #f93b84;
+
+/* Main */
+$main-color: #5a6488;
+$main-title-color: #fff;
+$main-title-shadow-color: #3b8ef9;
+$main-title-sub-color: #3b8ef9;
+$main-h2-color: #2a4789;
+

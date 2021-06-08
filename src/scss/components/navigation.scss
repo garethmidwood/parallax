@@ -1,0 +1,44 @@
+.navigation {
+  background-color: black;
+  line-height: 80px;
+  position: relative;
+  text-align: center;
+
+  .logo {
+    height: 25px;
+    position: absolute;
+    left: 45px;
+    top: 27px;
+
+    @include mq($until: desktop) {
+      position: fixed;
+      top: 17px;
+    }
+  }
+
+  .menu {
+    display: inline-block;
+    font-size: 87.5%;
+
+    li {
+      display: inline;
+      margin: 0 45px;
+
+      a {
+        color: $navigation-color;
+        text-decoration: none;
+
+        &:hover {
+          color: darken($navigation-color, 20%);
+        }
+      }
+    }
+  }
+
+  .cta-button {
+    font-size: 75%;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+  }
+}

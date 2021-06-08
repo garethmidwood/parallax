@@ -1,0 +1,31 @@
+{
+  "name": "parallax-tech-test",
+  "version": "1.0.0",
+  "description": "## Notes I've used tailwind for the first time here as you mentioned it on our call, I have included the time spent on this in the total.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garethmidwood/parallax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garethmidwood/parallax/issues"
+  },
+  "homepage": "https://github.com/garethmidwood/parallax#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "node-sass": "^6.0.0",
+    "precss": "^4.0.0"
+  },
+  "dependencies": {
+    "sass-mq": "^5.0.1"
+  }
+}
