@@ -27,14 +27,32 @@ main {
       }
 
       &.title {
+        font-size: 50px;
+        font-family: "Montserrat", serif;
+        font-weight: 700;
         line-height: 50px;
         text-align: left;
         color: $main-title-color;
         text-shadow: 0 0 1px $main-title-shadow-color;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $main-title-shadow-color;
+        text-transform: uppercase;
 
         span {
           color: $main-title-sub-color;
           display: block;
+        }
+      }
+
+      h2 {
+        font-family: "Open Sans", serif;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-align: left;
+
+        @include mq($until: desktop) {
+          font-size: 16px;
         }
       }
 

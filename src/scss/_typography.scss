@@ -12,41 +12,6 @@ body {
   }
 }
 
-h1 {
-  font-family: "Montserrat", serif;
-  font-size: 70px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-
-  @include mq($until: desktop) {
-    font-size: 50px;
-  }
-}
-
-h2 {
-  font-family: "Open Sans", serif;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -1px;
-  text-align: left;
-
-  @include mq($until: desktop) {
-    font-size: 16px;
-  }
-}
-
 strong {
   font-weight: 700;
 }
-
-/* classes last */
-.title {
-  font-size: 50px;
-  font-family: "Montserrat", serif;
-  font-weight: 700;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-}
-

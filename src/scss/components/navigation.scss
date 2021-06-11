@@ -1,8 +1,9 @@
 .navigation {
-  background-color: black;
+  height: 80px;
   line-height: 80px;
   position: relative;
   text-align: center;
+  z-index: 2;
 
   .logo {
     height: 25px;
@@ -11,14 +12,18 @@
     top: 27px;
 
     @include mq($until: desktop) {
-      position: fixed;
-      top: 17px;
+      left: 20px;
     }
   }
 
-  .menu {
+
+  nav {
     display: inline-block;
     font-size: 87.5%;
+
+    @include mq($until: desktop) {
+      display: none;
+    }
 
     li {
       display: inline;

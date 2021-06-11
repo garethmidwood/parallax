@@ -17,6 +17,13 @@
     background-color: darken($button-cta-bg-color, 20%);
   }
 
+  @include mq($until: tablet) {
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0;
+    padding: 0 17px;
+  }
+
   .shadow {
     position: absolute;
     top: -3px;

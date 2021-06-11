@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en_GB">
     <head>
         <title>Parallax FE Tech Test | Gareth Midwood</title>
-        <link rel="stylesheet" href="build/index.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="build/site.css" />
+        <script src="build/site.js"></script>
     </head>
     <body>
         <header>
             <div class="notification">
+                <a class="menu" href="#mobile-nav"><i class="fas fa-bars"></i></a>
                 Looking to buy tickets to an event? <a href="#">Get them here</a>
             </div>
 
             <div class="navigation">
                 <img class="logo" src="assets/images/logo.svg" alt="zicket.io logo" />
 
-                <ul class="menu">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Features</a>
-                    </li>
-                    <li>
-                        <a href="#">Clients</a>
-                    </li>
-                    <li>
-                        <a href="#">News</a>
-                    </li>
-                    <li>
-                        <a href="#">FAQs</a>
-                    </li>
-                </ul>
+                <nav id="main-nav">
+                    <ul>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#">News</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQs</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav id="mobile-nav">
+                </nav>
 
                 <a class="cta-button" href="#">Get Zicket</a>
             </div>
 
             <div class="hero">
                 <img class="cover" src="assets/images/hero.jpg" alt="People dancing" />
-                <div class="overlay radial"></div>
 
                 <div class="overlay message">
                     <div>

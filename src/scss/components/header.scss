@@ -4,8 +4,41 @@ header {
   .notification {
     background-color: $header-notification-bg-color;
     font-size: 75%;
+    height: 60px;
     line-height: 60px;
     text-align: center;
+    padding: 0 20px;
+
+    .menu {
+      display: none;
+      font-size: 20px;
+      left: 20px;
+      margin-left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    @include mq($until: desktop) {
+      text-align: right;
+
+      .menu {
+        display: block;
+      }
+    }
+
+    @include mq($until: tablet) {
+      line-height: 20px;
+      height: 50px;
+      padding-top: 10px;
+
+      .menu {
+        line-height: 60px;
+      }
+
+      a {
+        display: block;
+      }
+    }
 
     a {
       color: $header-notification-link-color;

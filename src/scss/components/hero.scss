@@ -1,20 +1,31 @@
 .hero {
+  margin-top: -80px;
+  height: calc(100vh - 60px);
+  min-height: 500px;
+  overflow: hidden;
   position: relative;
 
   .cover {
     object-fit: cover;
-    width: 100%;
+    min-width: 100%;
   }
 
   .overlay {
-    height: 100%;
+    height: calc(100% - 240px);
     min-width: 100%;
+    padding: 120px 0;
     position: absolute;
     top: 0;
 
-    &.radial {
+    &:before {
       background-image: linear-gradient(218deg, #7f3fd1 0%, #3b8ef9 100%);
+      bottom: 0;
+      content: '';
+      left: 0;
       opacity: 0.05;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
 
     &.message {
@@ -22,16 +33,30 @@
       color: $hero-color;
       display: flex;
       justify-content: center;
+      max-height: calc(100% - 240px);
       text-align: center;
 
-      h1 {
-        max-width: 720px;
-        margin-bottom: 18px;
-      }
+      div {
+        padding: 0 20px;
 
-      p {
-        margin: 0 auto 45px;
-        max-width: 370px;
+        h1 {
+          font-family: "Montserrat", serif;
+          font-size: 70px;
+          font-weight: 700;
+          max-width: 720px;
+          margin-bottom: 18px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include mq($until: desktop) {
+            font-size: 50px;
+          }
+        }
+
+        p {
+          margin: 0 auto 45px;
+          max-width: 370px;
+        }
       }
     }
   }
@@ -46,6 +71,10 @@
     position: absolute;
     right: 0;
 
+    @include mq($until: desktop) {
+      height: 60px;
+    }
+
     div {
       margin: 0 auto;
       border-top: 1px solid #fff;
@@ -53,9 +82,14 @@
       padding-top: 33px;
       text-align: center;
       text-transform: uppercase;
+
+      @include mq($until: desktop) {
+        max-width: 70%;
+        padding-top: 20px;
+      }
     }
   }
 
-  /* I left out the video as the  */
+  /* I left out the video as the asset was not included in the package */
 }
 

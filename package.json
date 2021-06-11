@@ -19,13 +19,15 @@
   "devDependencies": {
     "autoprefixer": "^9.0.0",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^6.0.0",
-    "precss": "^4.0.0"
-  },
-  "dependencies": {
+    "precss": "^4.0.0",
+    "gulp-cssimport": "^7.0.0",
+    "mmenu-light": "^3.0.8",
     "sass-mq": "^5.0.1"
   }
 }
