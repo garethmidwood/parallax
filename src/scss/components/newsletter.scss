@@ -3,7 +3,7 @@
   color: $newsletter-color;
   padding: 100px 0;
 
-  @include mq($until: tablet) {
+  @include mq($until: wide) {
     padding: 100px 20px;
   }
 
@@ -20,12 +20,13 @@
     div {
       flex-basis: 285px;
 
-      p {
+      span {
         font-size: 14px;
         line-height: 24px;
         font-weight: 400;
         width: 190px;
         text-align: left;
+        display: block;
 
         @include mq($until: desktop) {
           margin: 0 auto 55px;
@@ -56,17 +57,22 @@
       }
 
       input {
-        width: 400px;
         background: transparent;
         border-color: $newsletter-input-border-color;
         border-style: solid;
         border-width: 0 0 1px 0;
         color: $newsletter-color;
+        max-width: 80%;
         padding: 26px 20px;
+        width: 400px;
       }
 
       button {
         margin-left: 58px;
+
+        @include mq($until: desktop) {
+          margin-left: 0;
+        }
       }
     }
 
