@@ -57,6 +57,13 @@
           margin: 0 auto 45px;
           max-width: 370px;
         }
+
+        .cta-button {
+          &:after {
+            content: '→';
+            margin-left: 10px;
+          }
+        }
       }
     }
   }

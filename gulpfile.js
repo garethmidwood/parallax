@@ -3,7 +3,6 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const cssimport = require("gulp-cssimport");
 const sourcemaps = require('gulp-sourcemaps');
 
 sass.compiler = require('node-sass');
@@ -33,15 +32,13 @@ function css() {
     console.log('scss is happening');
 
     let sources = [
-        'src/scss/index.scss',
-        'node_modules/mmenu-light/dist/mmenu-light.css'
+        'src/scss/index.scss'
     ];
 
     return src(sources)
         .pipe( sourcemaps.init() )
-        .pipe( sass().on('error', sass.logError) )
-        .pipe( postcss([ require('autoprefixer') ]) )
-        .pipe( concat('site.css') )
+        .pipe( sass() )
+        // .pipe( postcss([ require('autoprefixer') ]) )
         .pipe( sourcemaps.write() )
         .pipe( dest('build/') );
 }
