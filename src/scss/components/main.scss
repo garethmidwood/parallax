@@ -110,12 +110,8 @@ main {
       }
 
       &.image-right {
-        img {
-          margin: -80px -20% 0 0 ;
-
-          @include mq($until: tablet) {
-            margin: 0 auto;
-          }
+        .shadow {
+          transform: scaleX(-1);
         }
       }
 
