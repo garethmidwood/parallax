@@ -1,0 +1,140 @@
+.carousel {
+  color: $carousel-color;
+  padding: 0 80px;
+  position: relative;
+
+  h3 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    line-height: 50px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    padding-right: 100px;
+  }
+
+  p {
+    width: 266px;
+    font-weight: 400;
+  }
+
+  .controls {
+    position: absolute;
+    top: 0;
+    right: 80px;
+
+    button {
+      display: inline-block;
+      background-color: $carousel-nav-bg-color;
+      border: 0;
+      border-radius: 25px;
+      color: $carousel-nav-color;
+      width: 50px;
+      line-height: 50px;
+      padding: 0;
+      text-align: center;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-left: 20px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        bottom: -5px;
+        right: -5px;
+        border: 1px solid $carousel-nav-bg-color;
+        border-radius: 32px;
+      }
+
+      &:hover {
+        background-color: $carousel-nav-bg-color-hover;
+
+        &:before {
+          border-color: $carousel-nav-bg-color-hover;
+        }
+      }
+    }
+  }
+
+  .contents {
+    margin-top: 90px;
+
+    .title {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 4px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    figcaption {
+      margin-top: 26px;
+      font-size: 18px;
+      color: $carousel-color;
+      font-weight: 700;
+      width: 210px;
+    }
+
+    a {
+      display: block;
+      color: $carousel-color;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($carousel-color, 20%);
+      }
+    }
+
+    .slick-list {
+      overflow: visible;
+    }
+
+    .slick-slide {
+      margin-right: 10px;
+      position: relative;
+      width: 350px;
+      padding-top: 20px;
+      overflow: hidden;
+      opacity: 0.5;
+
+      .images {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+
+        .feature {
+          height: 500px;
+        }
+
+        .logo {
+          width: 175px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .slick-active {
+      padding-top: 0;
+      opacity: 1;
+
+      .images {
+        .feature {
+          height: 520px;
+        }
+      }
+    }
+  }
+
+  .view-all {
+    padding: 100px 0;
+    text-align: center;
+  }
+}

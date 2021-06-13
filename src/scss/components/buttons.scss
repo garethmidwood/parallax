@@ -36,4 +36,18 @@
       border-radius: 30px;
     }
   }
+
+  &.arrow {
+    &:after {
+      content: '→';
+      margin-left: 10px;
+    }
+  }
+
+  &.short {
+    height: 48px;
+    line-height: 48px;
+    width: 230px;
+    padding: 0;
+  }
 }

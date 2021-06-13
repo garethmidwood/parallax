@@ -1,0 +1,30 @@
+.cta-sign-up {
+  text-align: center;
+  color: $signup-cta-color;
+  padding: 40px 0;
+
+  h3 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0 auto 55px;
+    width: 345px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  .cta-button {
+    background-color: $signup-cta-cta-bg-color;
+    color: $signup-cta-cta-color;
+
+    &:before {
+      border-color: $signup-cta-cta-bg-color;
+    }
+  }
+}

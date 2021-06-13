@@ -20,3 +20,14 @@ document.addEventListener(
             });
     }
 );
+
+document.addEventListener("DOMContentLoaded", function() {
+    $('.carousel .contents').slick({
+        appendArrows: '.carousel .controls',
+        prevArrow: '<button type="button" class="slick-prev">&lt;</button>',
+        nextArrow: '<button type="button" class="slick-next">&gt;</button>',
+        infinite: false,
+        slidesToScroll: 1,
+        variableWidth: true
+    });
+});
