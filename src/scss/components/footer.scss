@@ -1,4 +1,8 @@
 footer {
   background-color: #200d6f;
   padding: 100px 0;
+
+  @include mq($until: tablet) {
+    padding: 100px 20px;
+  }
 }

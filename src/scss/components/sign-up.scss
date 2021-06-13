@@ -1,7 +1,11 @@
 .cta-sign-up {
   text-align: center;
   color: $signup-cta-color;
-  padding: 40px 0;
+  padding: 40px 0 100px;
+
+  @include mq(mobile, mobileLandscape) {
+    padding: 40px 20px 100px;
+  }
 
   h3 {
     font-size: 50px;
@@ -25,6 +29,15 @@
 
     &:before {
       border-color: $signup-cta-cta-bg-color;
+    }
+
+    &:hover {
+      background-color: $signup-cta-cta-color;
+      color: $signup-cta-cta-bg-color;
+
+      &:before {
+        border-color: $signup-cta-cta-color;
+      }
     }
   }
 }

@@ -18,6 +18,59 @@ main {
       width: auto;
     }
 
+    &.image-right,
+    &.image-left {
+      .image {
+        position: relative;
+        padding: 0 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .shadow {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 25%;
+          left: 25%;
+          perspective: 100vw;
+          perspective-origin: right;
+
+          &:before {
+            background-color: $main-image-shadow-bg-color;
+            position: absolute;
+            top: 20%;
+            left: -40%;
+            right: -40%;
+            bottom: 20%;
+            content: '';
+            display: block;
+            border-radius: 5px;
+            transform-origin: center right;
+            transform: rotateY(40deg) skewX(20deg);
+
+            @include mq($until: tablet) {
+              left: -5%;
+              right: -5%;
+            }
+          }
+        }
+
+        img {
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+
+    &.image-right {
+      flex-direction: row-reverse;
+
+      .shadow {
+        transform: scaleX(-1);
+      }
+    }
+
     > div {
       flex-basis: 50%;
       line-height: 30px;
@@ -68,55 +121,6 @@ main {
         }
       }
 
-      &.image-right,
-      &.image-left {
-        position: relative;
-        padding: 0 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .shadow {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 25%;
-          left: 25%;
-          perspective: 100vw;
-          perspective-origin: right;
-
-          &:before {
-            background-color: $main-image-shadow-bg-color;
-            position: absolute;
-            top: 20%;
-            left: -40%;
-            right: -40%;
-            bottom: 20%;
-            content: '';
-            display: block;
-            border-radius: 5px;
-            transform-origin: center right;
-            transform: rotateY(40deg) skewX(20deg);
-
-            @include mq($until: tablet) {
-              left: -5%;
-              right: -5%;
-            }
-          }
-        }
-
-        img {
-          position: relative;
-          z-index: 2;
-        }
-      }
-
-      &.image-right {
-        .shadow {
-          transform: scaleX(-1);
-        }
-      }
-
       .number {
         color: $main-number-color;
         font-family: Montserrat;
@@ -127,6 +131,11 @@ main {
         position: absolute;
         top: 30px;
         left: 80px;
+
+        @include mq($until: tablet) {
+          top: -16px;
+          left: 0;
+        }
       }
 
       h2 {

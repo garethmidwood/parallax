@@ -20,8 +20,15 @@
 
   .controls {
     position: absolute;
-    top: 0;
+    top: -140px;
     right: 80px;
+
+    @include mq($until: tablet) {
+      position: relative;
+      top: 30px;
+      right: auto;
+      text-align: center;
+    }
 
     button {
       display: inline-block;
@@ -60,8 +67,16 @@
     }
   }
 
+  .inner {
+    position: relative;
+  }
+
   .contents {
     margin-top: 90px;
+
+    @include mq($until: tablet) {
+      margin-top: 50px;
+    }
 
     .title {
       display: block;
